@@ -136,10 +136,7 @@ public final class XPrison extends ExtendedJavaPlugin {
 
 	private void printOnEnableMessage() {
 		try {
-			this.getLogger().info(FigletFont.convertOneLine("X-PRISON"));
-			this.getLogger().info(this.getDescription().getVersion());
-			this.getLogger().info("By: " + this.getDescription().getAuthors());
-			this.getLogger().info("Website: " + this.getDescription().getWebsite());
+			this.getLogger().info(FigletFont.convertOneLine("Prison"));
 		} catch (IOException ignored) {
 		}
 	}
