@@ -136,7 +136,7 @@ public final class XPrison extends ExtendedJavaPlugin {
 
 	private void printOnEnableMessage() {
 		try {
-			this.getLogger().info(FigletFont.convertOneLine("Prison"));
+			this.getLogger().info("X-Prison-Reloaded Loaded!");
 		} catch (IOException ignored) {
 		}
 	}
