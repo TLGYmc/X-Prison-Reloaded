@@ -92,7 +92,7 @@ public final class XPrison extends ExtendedJavaPlugin {
 	@Override
 	protected void enable() {
 
-		this.printOnEnableMessage();
+		this.getLogger().info("X-Prison-Reloaded Loaded!");
 		this.modules = new LinkedHashMap<>();
 		this.fileManager = new FileManager(this);
 		this.fileManager.getConfig("config.yml").copyDefaults(true).save();
@@ -134,12 +134,6 @@ public final class XPrison extends ExtendedJavaPlugin {
 		SkullUtils.init();
 	}
 
-	private void printOnEnableMessage() {
-		try {
-			this.getLogger().info("X-Prison-Reloaded Loaded!");
-		} catch (IOException ignored) {
-		}
-	}
 
 	private void initNicknameService() {
 		NicknameRepository nicknameRepository = new NicknameRepositoryImpl(this.getPluginDatabase());
