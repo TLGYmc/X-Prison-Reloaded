@@ -22,23 +22,9 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Verify
       run: mvn verify -f pom.xml
-    # - name: Upload
-    #   run: mkdir staging && cp target/*.jar staging
-    # - uses: actions/upload-artifact@v4
-    #   with:
-    #     name: Package
-    #     path: staging/*.jar
-    - name: Checkout code
-      uses: actions/checkout@v4
-    - name: Create Release
-      id: create_release
-      uses: comnoco/create-release@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload
+      run: mkdir staging && cp target/*.jar staging
+    - uses: actions/upload-artifact@v4
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: |
-          update
-        draft: false
-        prerelease: false
+        name: Package
+        path: staging/*.jar
