@@ -335,10 +335,10 @@ public final class XPrison extends ExtendedJavaPlugin {
                                     final XPrisonModule module = modules.get(name);
                                     if (module != null) {
                                         reloadModule(module);
-                                        c.sender().sendMessage(TextUtils.applyColor("&aSuccessfully reloaded &f" + name + " &amodule"));
                                     } else {
                                         c.sender().sendMessage(TextUtils.applyColor("&cThe module &6" + c.rawArg(1) + " &cdoesn't exist"));
                                     }
+                                    c.sender().sendMessage(TextUtils.applyColor("Successfully reloaded modules!"));
                                     break;
                             }
                         } else if (c.sender() instanceof Player && "help".equalsIgnoreCase(c.rawArg(0)) || "?".equalsIgnoreCase(c.rawArg(0))) {
